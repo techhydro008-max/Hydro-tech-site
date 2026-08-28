@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hydro-tech | Hydraulique, BTP et Prestations Techniques</title>
+
+  <meta name="description" content="Hydro-tech est une entreprise spécialisée dans l'hydraulique, l'eau, l'assainissement, le BTP, les prestations techniques et le commerce général au Niger.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #f7f9fb;
+      line-height: 1.6;
+    }
+
+    /* MENU */
+
+    header {
+      background: #083344;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #38bdf8;
+    }
+
+    .menu {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .menu a:hover {
+      color: #38bdf8;
+    }
+
+    /* ACCUEIL */
+
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(8,51,68,0.85), rgba(8,51,68,0.92)),
+        url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      max-width: 800px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin-bottom: 30px;
+      color: #e5e7eb;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #0ea5e9;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #0284c7;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #083344;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 80px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #083344;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #64748b;
+      font-size: 17px;
+    }
+
+    /* A PROPOS */
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-image {
+      background: #0ea5e9;
+      min-height: 350px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 120px;
+    }
+
+    .about-text h2 {
+      color: #083344;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      color: #475569;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #eaf4f8;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 35px 25px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .service-icon {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      color: #083344;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .service-card p {
+      color: #64748b;
+    }
+
+    /* EXPERTISE */
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .expertise-box {
+      background: #083344;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .expertise-box h3 {
+      font-size: 28px;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+
+    /* POURQUOI */
+
+    .why {
+      background: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .why-card {
+      padding: 30px;
+      border-left: 5px solid #0ea5e9;
+      background: #f8fafc;
+    }
+
+    .why-card h3 {
+      color: #083344;
+      margin-bottom: 10px;
+    }
+
+    /* REALISATIONS */
+
+    .projects {
+      background: #083344;
+      color: white;
+    }
+
+    .projects .section-title h2 {
+      color: white;
+    }
+
+    .projects .section-title p {
+      color: #cbd5e1;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: white;
+      color: #1f2937;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .project-image {
+      height: 200px;
+      background: #38bdf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 70px;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content h3 {
+      color: #083344;
+      margin-bottom: 10px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: #eaf4f8;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info h3 {
+      color: #083344;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      margin-bottom: 20px;
+      padding: 18px;
+      background: white;
+      border-radius: 8px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #083344;
+      margin-bottom: 5px;
+    }
+
+    form {
+      background: white;
+      padding: 35px;
+      border-radius: 10px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      background: #0ea5e9;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0284c7;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #061f29;
+      color: #cbd5e1;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer strong {
+      color: #38bdf8;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .menu {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .services-grid,
+      .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .services-grid,
+      .project-grid,
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU -->
+
+  <header>
+    <nav>
+      <div class="logo">HYDRO<span>-TECH</span></div>
+
+      <ul class="menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#realisations">Réalisations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ACCUEIL -->
+
+  <section class="hero" id="accueil">
+    <div class="hero-content">
+
+      <h1>
+        Des solutions techniques pour
+        <span>l'eau, l'assainissement et le développement</span>
+      </h1>
+
+      <p>
+        Hydro-tech est une entreprise spécialisée dans l'hydraulique,
+        l'eau, l'assainissement, le BTP, les prestations techniques
+        et le commerce général au Niger.
+      </p>
+
+      <a href="#contact" class="btn btn-primary">
+        Demander un devis
+      </a>
+
+      <a href="#services" class="btn btn-outline">
+        Découvrir nos services
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- A PROPOS -->
+
+  <section id="apropos">
+
+    <div class="container">
+
+      <div class="about">
+
+        <div class="about-image">
+          💧
+        </div>
+
+        <div class="about-text">
+
+          <h2>À propos de Hydro-tech</h2>
+
+          <p>
+            Hydro-tech est une entreprise nigérienne engagée dans la
+            réalisation de solutions techniques adaptées aux besoins
+            des collectivités, entreprises, organisations et particuliers.
+          </p>
+
+          <p>
+            Notre expertise couvre notamment l'hydraulique, les ouvrages
+            d'approvisionnement en eau, l'assainissement, les travaux de
+            construction et diverses prestations techniques.
+          </p>
+
+          <p>
+            Notre ambition est de contribuer au développement des
+            infrastructures et à l'amélioration des conditions de vie
+            grâce à des travaux réalisés avec professionnalisme,
+            qualité et responsabilité.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Nos domaines d'intervention</h2>
+
+        <p>
+          Hydro-tech propose des solutions adaptées aux projets publics,
+          humanitaires, communautaires et privés.
+        </p>
+      </div>
+
+
+      <div class="services-grid">
+
+        <div class="service-card">
+
+          <div class="service-icon">💧</div>
+
+          <h3>Hydraulique</h3>
+
+          <p>
+            Études, suivi et réalisation de travaux liés à
+            l'approvisionnement en eau et aux infrastructures hydrauliques.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">🚰</div>
+
+          <h3>Eau et assainissement</h3>
+
+          <p>
+            Solutions techniques dans les domaines de l'eau,
+            de l'hygiène, de l'assainissement et de la gestion
+            des infrastructures WASH.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">🏗️</div>
+
+          <h3>BTP et construction</h3>
+
+          <p>
+            Construction et réhabilitation d'ouvrages,
+            bâtiments, infrastructures communautaires
+            et travaux de génie civil.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">🔩</div>
+
+          <h3>Prestations techniques</h3>
+
+          <p>
+            Assistance technique, suivi de chantier,
+            maintenance, contrôle et accompagnement
+            dans la réalisation de projets.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">📦</div>
+
+          <h3>Fourniture</h3>
+
+          <p>
+            Fourniture de matériels, équipements,
+            consommables et autres produits nécessaires
+            aux projets et organisations.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">🤝</div>
+
+          <h3>Commerce général</h3>
+
+          <p>
+            Approvisionnement et fourniture de produits
+            et services selon les besoins des entreprises,
+            projets et organisations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- EXPERTISE -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Notre engagement</h2>
+
+        <p>
+          Des solutions professionnelles adaptées aux réalités du terrain.
+        </p>
+      </div>
+
+
+      <div class="expertise-grid">
+
+        <div class="expertise-box">
+          <h3>✓</h3>
+          <p>Qualité des travaux</p>
+        </div>
+
+        <div class="expertise-box">
+          <h3>✓</h3>
+          <p>Professionnalisme</p>
+        </div>
+
+        <div class="expertise-box">
+          <h3>✓</h3>
+          <p>Respect des délais</p>
+        </div>
+
+        <div class="expertise-box">
+          <h3>✓</h3>
+          <p>Solutions adaptées</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- POURQUOI -->
+
+  <section class="why">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Pourquoi choisir Hydro-tech ?</h2>
+      </div>
+
+
+      <div class="why-grid">
+
+        <div class="why-card">
+
+          <h3>Une expertise technique</h3>
+
+          <p>
+            Une approche basée sur les compétences techniques,
+            l'expérience de terrain et la compréhension des
+            besoins des projets.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <h3>La qualité avant tout</h3>
+
+          <p>
+            Nous accordons une importance particulière au choix
+            des matériaux, à la qualité d'exécution et à la
+            durabilité des ouvrages.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <h3>Un partenaire de confiance</h3>
+
+          <p>
+            Hydro-tech souhaite construire des relations durables
+            avec ses clients, partenaires et organisations.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REALISATIONS -->
+
+  <section class="projects" id="realisations">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Nos réalisations et expériences</h2>
+
+        <p>
+          Découvrez les domaines dans lesquels Hydro-tech intervient.
+        </p>
+
+      </div>
+
+
+      <div class="project-grid">
+
+        <div class="project-card">
+
+          <div class="project-image">🏗️</div>
+
+          <div class="project-content">
+
+            <h3>Travaux de construction</h3>
+
+            <p>
+              Réalisation et suivi de travaux d'infrastructures
+              et d'ouvrages communautaires.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <div class="project-image">🚰</div>
+
+          <div class="project-content">
+
+            <h3>Projets hydrauliques</h3>
+
+            <p>
+              Participation à des travaux liés à l'eau,
+              aux infrastructures hydrauliques et aux
+              services techniques.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="project-card">
+
+          <div class="project-image">🔧</div>
+
+          <div class="project-content">
+
+            <h3>Prestations techniques</h3>
+
+            <p>
+              Accompagnement technique, suivi de chantier
+              et prestations spécialisées.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Contactez-nous</h2>
+
+        <p>
+          Vous avez un projet ou souhaitez demander une prestation ?
+          Contactez Hydro-tech.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+
+        <div class="contact-info">
+
+          <h3>Hydro-tech</h3>
+
+          <div class="contact-item">
+
+            <strong>📍 Zone d'intervention</strong>
+
+            Niger
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <strong>📞 Téléphone</strong>
+
+            À compléter
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <strong>📧 Email</strong>
+
+            À compléter
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <strong>💼 Services</strong>
+
+            Hydraulique • Eau • Assainissement • BTP •
+            Prestations techniques • Fourniture
+
+          </div>
+
+        </div>
+
+
+        <form>
+
+          <input
+            type="text"
+            placeholder="Votre nom"
+            required
+          >
+
+          <input
+            type="email"
+            placeholder="Votre adresse email"
+            required
+          >
+
+          <input
+            type="text"
+            placeholder="Objet de votre demande"
+          >
+
+          <textarea
+            placeholder="Décrivez votre projet ou votre besoin"
+          ></textarea>
+
+          <button type="button">
+            Envoyer votre demande
+          </button>
+
+        </form>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 <strong>Hydro-tech</strong> —
+      Hydraulique, Eau, Assainissement, BTP et Prestations Techniques.
+    </p>
+
+    <br>
+
+    <p>
+      Construire aujourd'hui les solutions de demain.
+    </p>
+
+  </footer>
+
+</body>
+  </html>
